@@ -9,6 +9,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       cowsay: `${faker.company.bsBuzz()} up the team!!!`,
+      eye: "00",
+      tongue: "",
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -20,12 +22,13 @@ class App extends React.Component {
       }
     });
   }
+
   render() {
     return (
       <div>
         <h1>Generate Cowsay Lorem</h1>
         <button onClick={this.handleClick}>Click Me!</button>
-        <pre>{cowsay.say({text: this.state.cowsay})}</pre>
+        <pre>{cowsay.say({text: this.state.cowsay, e: this.state.eye, T: this.state.tongue})}</pre>
       </div>
     )
   }

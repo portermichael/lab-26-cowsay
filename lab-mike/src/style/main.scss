@@ -13,9 +13,9 @@ $color-white: #D6D8DD;
   font-size: 1em;
   font-weight: normal;
   font-style: normal;
-  font-family: Liberation Serif;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   text-decoration: none;
-  color: black;
+  color: $color-black;
   border: none;
   outline: none;
   background: none;
@@ -43,6 +43,7 @@ title, script, link {
 
 
 body {
+  background: $color-secondary;
   position: relative;
   display: block;
 }
@@ -52,6 +53,7 @@ p {
 }
 pre {
   white-space: pre;
+  display: block;
 }
 
 hr {
@@ -70,43 +72,27 @@ strong {
 }
 
 a {
-  color: blue;
+  color: $color-black;
   text-decoration: underline;
 }
 
 a:visited {
-  color: purple;
+  color: $color-black;
   text-decoration: underline;
 }
 a:hover {
-  color: green;
+  color: $color-black;
   text-decoration: underline;
 }
 
-label {
-  display: block;
-  font-size: 1.25em;
-  font-weight: 900;
-  margin-bottom: 0.5em;
-}
-
-textarea, input {
-  padding: 0.5em;
-  border: 1px solid gray;
-  margin-bottom: 0.5em;
-}
-
-textarea:focus, input:focus {
-  border: 1px solid blue;
-}
 
 button {
-  border: 1px solid black;
+  border: 1px solid $color-black;
 }
 
 button:hover {
   border: 1px solid blue;
-  background: gray;
+  background: $color-primary;
 }
 
 h1 {
